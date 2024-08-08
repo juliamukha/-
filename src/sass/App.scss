@@ -1,0 +1,75 @@
+@import "./variables.module.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+main,
+section {
+    display: block;
+}
+
+html,
+body {
+    font-family: $font-family-Roboto;
+    font-size: $font-size;
+}
+
+#root {
+    min-height: 100vh;
+    background: url("../assets/images/bg_pattern.jpg") repeat;
+    background-size: 35%;
+    background-color: var(--background-theme-color);
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 $margin-level-3;
+    margin: 0 auto;
+}
+
+.main {
+    margin-top: $header-height;
+    padding: $margin-level-1 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.link {
+    color: var(--text-theme-color);
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+    }
+}
+
+.icon-link {
+    @include icon-button();
+    display: inline-block;
+    padding: 0 $margin-level-6;
+}

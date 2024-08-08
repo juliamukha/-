@@ -1,0 +1,165 @@
+$primary-color: #880017;
+$primary-color-light: #AD1916;
+$primary-color-dark: #730115;
+
+$secondary-color: #b6b6ad;
+$secondary-color-light: #D3D3C6;
+$secondary-color-dark: #8F8F87;
+
+$background-white-color: #FFF;
+$background-light-color: #F5F5F5;
+$border-color: #E7E7E7;
+
+$border-color: #cfcfcf;
+$outline-color: #89877d;
+$bg-disabled-color: #eee;
+
+$text-color: #101010;
+$text-disabled-color: #777;
+
+$text-danger-color: #ad1916;
+$bg-danger-color: #f2dede;
+
+$text-success-color: #286629;
+$bg-success-color: #dff0d8;
+
+$shadow: 0 5px 15px rgba(0, 0, 0, .4);
+
+$margin-level-1: 72px;
+$margin-level-2: 48px;
+$margin-level-3: 40px;
+$margin-level-4: 32px;
+$margin-level-5: 24px;
+$margin-level-6: 20px;
+$margin-level-7: 16px;
+$margin-level-8: 8px;
+
+$header-height: 104px;
+$input-height: 40px;
+
+@font-face {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Roboto Condensed"), url('./Fonts/RobotoCondensed-Regular.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Roboto Condensed"), url('./Fonts/RobotoCondensed-SemiBold.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Roboto Condensed"), url('./Fonts/RobotoCondensed-Bold.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: "PTSans";
+    font-style: normal;
+    font-weight: normal;
+    src: local("PTSans"), url('./Fonts/PTSans-Regular.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: "PTSans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PTSans"), url('./Fonts/PTSans-Bold.ttf') format('opentype');
+}
+
+
+
+$font-size: 16px;
+$font-family-Roboto: "Roboto Condensed", sans-serif;
+$font-family-PTSans: "PTSans", sans-serif;
+
+
+
+@mixin transition {
+    transition: all 0.5s ease;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin headline-1 {
+    font-family: $font-family-PTSans;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--text-theme-color);
+}
+
+@mixin headline-2 {
+    font-family: $font-family-PTSans;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--text-theme-color);
+}
+
+@mixin headline-3 {
+    font-family: $font-family-PTSans;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-theme-color);
+}
+
+@mixin headline-4 {
+    font-family: $font-family-PTSans;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    color: var(--text-theme-color);
+}
+
+@mixin text-regular {
+    font-family: $font-family-Roboto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+@mixin text-bold {
+    font-family: $font-family-Roboto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+@mixin icon-button {
+    background-color: transparent;
+    cursor: pointer;
+
+    svg {
+        height: 24px;
+        color: var(--text-theme-color);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+
+        svg {
+            color: $secondary-color;
+        }
+    }
+
+    &:hover svg {
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,5 @@
+@import "./../../../sass/variables.module.scss";
+
+.icon-button {
+  @include icon-button();
+}

@@ -1,0 +1,47 @@
+@import "./../../../sass/variables.module.scss";
+
+.input-holder {
+    display: flex;
+    position: relative;
+
+    &__label {
+        color: var(--text-theme-color);
+        @include text-bold();
+        margin-bottom: $margin-level-8;
+    }
+
+    &__input {
+        color: var(--text-theme-color);
+        @include text-regular();
+        background-color: var(--background-theme-color);
+        border: 1px solid $border-color;
+        padding: 0 15px;
+        height: $input-height;
+        display: flex;
+        align-items: center;
+
+        &::placeholder {
+            @include text-regular();
+            color: $secondary-color;
+        }
+
+        &:focus {
+            border-color: $primary-color-light;
+        }
+
+        &:disabled {
+            background-color: $border-color;
+            color: $secondary-color;
+        }
+
+        &_error {
+            border-color: $text-danger-color;
+            background-color: $bg-danger-color;
+        }
+    }
+
+    &__error {
+        color: $text-danger-color;
+        @include text-regular();
+    }
+}
